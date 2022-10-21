@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostsService } from './services/posts.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pipesAsync';
+
+  //AsyncPipe
+  promPost: Promise<any[]>;
+
+  constructor(private PostsService: PostsService) {
+
+    this.promPost = this.PostsService.getAll();
+  }
+
+  ngOnInit() { }
 }
+
+
+
+
