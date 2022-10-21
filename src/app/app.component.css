@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5em;
+}
+
+h2 {
+    color: rgb(251, 4, 99);
+}

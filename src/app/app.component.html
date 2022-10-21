@@ -1,7 +1,30 @@
+<!-- 
+    Los Pipes
+Utilizamos está herramienta cuando queremos transformar nuestros datos en el momento de mostrarlo dentro de nuestra plantilla.
+
+Ejemplo: Un número décimal se puede reducir los decimales a la hora de trabajar en la plantilla.
+
+Vienen Pipes de Angular aunque se pueden personalizar.
+-->
+
+<!--
+     CurrencyPipe 
+    -->
+
 <h1>Este es el componente principal</h1>
+<h2>Este es el Pipe de Currency:</h2>
+<p>Precio: {{ precio }}</p>
+<p>Precio: {{ precio | currency }}</p>
+<p>Precio: {{precio | currency: 'EUR'}}</p>
+<p>Precio: {{precio | currency: 'EUR': 'symbol': '1.1-1'}}</p>
+
+<!-- DecimalPipe -->
+
+
+
 <!-- {{promPost | async}} -->
-<ul>
+<!-- <ul>
     <li *ngFor="let post of promPost | async">
         {{post.title}}
     </li>
-</ul>
+</ul> -->
