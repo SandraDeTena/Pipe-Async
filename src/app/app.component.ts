@@ -12,12 +12,18 @@ export class AppComponent {
   //currencyPipe => Se encarga de formatear(y por tanto de mostrar) tema de precios, por ejemplo en una tienda porque tiene un precio especifico.
   precio: number;
 
+  //DecimalPipe
+  numero: number;
+
   //AsyncPipe
   // promPost: Promise<any[]>;
 
   constructor(private PostsService: PostsService) {
     //currentyPipe
     this.precio = 198.87;
+
+    //DecimalPipe
+    this.numero = 3.8819200430;
 
     // this.promPost = this.PostsService.getAll();
   }
