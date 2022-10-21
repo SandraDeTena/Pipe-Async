@@ -11,7 +11,7 @@ export class PostsService {
   constructor(private httpClient: HttpClient) { }
 
   //Método para recuperar todos
-  getAll(): Promise<any[]> {
-    return this.httpClient.get<any[]>('https://jsonplaceholder.typicode.com/posts').toPromise();
-  }
+  // getAll(): Promise<[]> {
+  //   return this.httpClient.get<[]>('https://jsonplaceholder.typicode.com/posts').toPromise();
+  // }
 }
