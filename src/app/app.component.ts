@@ -15,6 +15,10 @@ export class AppComponent {
   //DecimalPipe
   numero: number;
 
+  //DatePipe
+  fechaActual: Date;
+
+
   //AsyncPipe
   // promPost: Promise<any[]>;
 
@@ -25,10 +29,16 @@ export class AppComponent {
     //DecimalPipe
     this.numero = 3.8819200430;
 
+    //DatePipe
+    this.fechaActual = new Date();
+
     // this.promPost = this.PostsService.getAll();
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    //CRONOMETRO
+    setInterval(() => this.fechaActual = new Date(), 1000);
+  }
 }
 
 

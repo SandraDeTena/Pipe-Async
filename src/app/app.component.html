@@ -23,7 +23,25 @@ Vienen Pipes de Angular aunque se pueden personalizar.
 <h2>Este es el Pipe de DecimalPipe</h2>
 <p>Número: {{ numero }}</p>
 <p>Número: {{ numero | number: '1.2-4' }}</p>
+<br>
 
+<!-- DatePipe -->
+<h2>Este es el Pipe de DatePipe</h2>
+<p>Fecha: {{ fechaActual }}</p>
+<p>Fecha: {{ fechaActual | date }}</p>
+<!-- Fecha dd/MM/YY hh:mm | 21/10/22, 12:58 -->
+<p>Fecha: {{ fechaActual | date: 'short' }}</p>
+<!-- Fecha | 8 21 de octubre de 2022, 12:58:19 GMT+2 -->
+<p>Fecha: {{ fechaActual | date: 'long' }}</p>
+<!-- Fecha solo la hora -->
+<p>Fecha: {{ fechaActual | date: 'shortTime' }}</p>
+<!-- Fecha CUSTOMIZADA 21-10-2022 -->
+<p>Fecha: {{ fechaActual | date: 'dd-MM-yyyy' }}</p>
+<!-- Fecha CUSTOMIZADA 21-octubre-2022 -->
+<p>Fecha: {{ fechaActual | date: 'dd-LLLL-yyyy' }}</p>
+<!-- Hora CUSTOMIZADA  -->
+<p>Fecha: {{ fechaActual | date: 'HH:mm:ss' }}</p>
+<br>
 
 <!-- {{promPost | async}} -->
 <!-- <ul>
