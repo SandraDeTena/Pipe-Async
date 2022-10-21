@@ -1,2 +1,7 @@
 <h1>Este es el componente principal</h1>
-{{promPost | async}}
+<!-- {{promPost | async}} -->
+<ul>
+    <li *ngFor="let post of promPost | async">
+        {{post.title}}
+    </li>
+</ul>
