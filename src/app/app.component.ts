@@ -40,7 +40,9 @@ export class AppComponent {
 
   //AsyncPipe => Esto nos permite resolver una promesa dentro de nuestro HTML
   prom: Promise<string>;
-  // promPost: Promise<any[]>;
+  //Me va a devolver todas las promesas de la página de: https://jsonplaceholder.typicode.com/guide/
+  promPosts: Promise<any[]>;
+
 
   constructor(private PostsService: PostsService) {
 
@@ -76,8 +78,8 @@ export class AppComponent {
       setTimeout(() => resolve('Se resuelve la promesa pasados 4 seg.'), 4000)
     });
 
+    this.promPosts = this.PostsService.getAll();
 
-    // this.promPost = this.PostsService.getAll();
   }
 
 
