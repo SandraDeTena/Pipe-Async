@@ -28,7 +28,7 @@ export class AppComponent {
   numAleatorio: number;
 
   //JSONPipe =>Obtener de un objeto un poco más complejo una representación de string.
-  // estudiante: any;
+  estudiante: any;
 
 
   //AsyncPipe
@@ -49,11 +49,11 @@ export class AppComponent {
     this.numAleatorio = Math.random();
 
     //JSONPipe =>Obtener de un objeto un poco más complejo una representación de string.
-    // this.estudiante = {
-    //   nombre: 'Roberto',
-    //   apellidos: 'López',
-    //   notas: [3.5, 4.8, 7, 8.3]
-    // }
+    this.estudiante = {
+      nombre: 'Roberto',
+      apellidos: 'López',
+      notas: [3.5, 4.8, 7, 8.3]
+    }
 
     // this.promPost = this.PostsService.getAll();
   }
