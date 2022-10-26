@@ -38,8 +38,8 @@ export class AppComponent {
   minimo: number;
   maximo: number;
 
-
-  //AsyncPipe
+  //AsyncPipe => Esto nos permite resolver una promesa dentro de nuestro HTML
+  prom: Promise<string>;
   // promPost: Promise<any[]>;
 
   constructor(private PostsService: PostsService) {
@@ -70,6 +70,11 @@ export class AppComponent {
     this.animales = ['Perro', 'Gato', 'Pájaro', 'Monos', 'Tortuga', 'Caballos'];
     this.minimo = 0;
     this.maximo = this.animales.length;
+
+    //AsyncPipe => Esto nos permite resolver una promesa dentro de nuestro HTML
+    this.prom = new Promise((resolve, reject) => {
+      setTimeout(() => resolve('Se resuelve la promesa pasados 4 seg.'), 4000)
+    });
 
 
     // this.promPost = this.PostsService.getAll();

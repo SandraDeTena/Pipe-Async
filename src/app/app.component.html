@@ -102,20 +102,12 @@ Vienen Pipes de Angular aunque se pueden personalizar.
 <br>
 <input type="range" min="0" [max]="animales.length" strep="1" [(ngModel)]="minimo"> {{minimo}}
 <input type="range" min="0" [max]="animales.length" strep="1" [(ngModel)]="maximo"> {{maximo}}
+<br>
 
+<!-- AsyncPipe => Esto nos permite resolver una promesa dentro de nuestro HTML -->
+<h2>Este es el Pipe de AsyncPipe</h2>
+<p>Mensaje: {{ prom | async }}</p>
 
-<!-- Esto es de Ricky Morty -->
-<!-- <div *ngIf="character">
-    <h3>{{ character.name }}</h3>
-    <img src="{{character.image}}" alt="">
-</div>
-
-<div *ngIf="characterO$ | async as ch">
-    <h3>{{ character.name }}</h3>
-    <img src="{{character.image}}" alt="">
-</div> -->
-
-<!-- {{promPost | async}} -->
 <!-- <ul>
     <li *ngFor="let post of promPost | async">
         {{post.title}}
