@@ -64,7 +64,7 @@ export class AppComponent {
     //LowerCase | UpperCase | TitleCas
     this.texto = 'En un lugar de la Mancha';
 
-    //SlicePipe
+    //SlicePipe 
     this.animales = ['Perro', 'Gato', 'Pájaro', 'Monos', 'Tortuga', 'Caballos']
 
 
