@@ -77,13 +77,31 @@ Vienen Pipes de Angular aunque se pueden personalizar.
 <br>
 
 <ul>
-    <p>Sólo sé me va ha mostrar los animales 0 de la lista - 'Perro' - , & el 2 que es el - 'Pájaro' -. </p>
+    <p class="subtitulo">Sólo sé me va ha mostrar los animales 0 de la lista - 'Perro' - , & el 2 que es el - 'Pájaro'
+        -. </p>
     <li *ngFor="let animal of animales | slice:0:2"> {{ animal }}</li>
 </ul>
 <br>
 
-<input type="range" min="0" [max]="animales.length-1" strep="1">
-<input type="range" min="0" [max]="animales.length-1" strep="1">
+<ul>
+    <p class="subtitulo">Interactuando con el inpun range + el Array de Animales. </p>
+    <li *ngFor="let animal of animales | slice:minimo:maximo"> {{ animal }}</li>
+</ul>
+<br>
+<input type="range" min="0" [max]="animales.length" strep="1" [(ngModel)]="minimo"> {{minimo}}
+<input type="range" min="0" [max]="animales.length" strep="1" [(ngModel)]="maximo"> {{maximo}}
+
+<br>
+
+<ul>
+    <p class="subtitulo">Interactuando con el inpun range + el Array de Animales, pero la diferencia es que puedo
+        trabajar con las letras
+        del string que quiero que aparezcaan. </p>
+    <li *ngFor="let animal of animales | slice:minimo:maximo"> {{ animal | slice: 1:3 }}</li>
+</ul>
+<br>
+<input type="range" min="0" [max]="animales.length" strep="1" [(ngModel)]="minimo"> {{minimo}}
+<input type="range" min="0" [max]="animales.length" strep="1" [(ngModel)]="maximo"> {{maximo}}
 
 
 <!-- Esto es de Ricky Morty -->

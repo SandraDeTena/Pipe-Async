@@ -35,6 +35,8 @@ export class AppComponent {
 
   //SlicePipe =>Si trabajamos con Array(colección)coger sólo ciertos elementos.
   animales: string[];
+  minimo: number;
+  maximo: number;
 
 
   //AsyncPipe
@@ -65,7 +67,9 @@ export class AppComponent {
     this.texto = 'En un lugar de la Mancha';
 
     //SlicePipe 
-    this.animales = ['Perro', 'Gato', 'Pájaro', 'Monos', 'Tortuga', 'Caballos']
+    this.animales = ['Perro', 'Gato', 'Pájaro', 'Monos', 'Tortuga', 'Caballos'];
+    this.minimo = 0;
+    this.maximo = this.animales.length;
 
 
     // this.promPost = this.PostsService.getAll();
