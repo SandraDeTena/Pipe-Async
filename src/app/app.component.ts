@@ -30,6 +30,9 @@ export class AppComponent {
   //JSONPipe =>Obtener de un objeto un poco más complejo una representación de string.
   estudiante: any;
 
+  //LowerCase | UpperCase | TitleCase => Para modificación de textos, en Mayúsculas, en minusculas, o en Capital case
+  texto: string;
+
 
   //AsyncPipe
   // promPost: Promise<any[]>;
@@ -54,6 +57,9 @@ export class AppComponent {
       apellidos: 'López',
       notas: [3.5, 4.8, 7, 8.3]
     }
+
+    //LowerCase | UpperCase | TitleCas
+    this.texto = 'En un lugar de la Mancha';
 
     // this.promPost = this.PostsService.getAll();
   }

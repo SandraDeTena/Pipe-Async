@@ -56,6 +56,18 @@ Vienen Pipes de Angular aunque se pueden personalizar.
 <p>Estudiante: {{ estudiante }}</p>
 <!-- Arriba si sólo mostramos el objeto de estudiante sale un objectObject -->
 <p>Estudiante: {{ estudiante | json }}</p>
+<br>
+
+<!-- LowerCase | UpperCase | TitleCase -->
+<h2>Este es el Pipe de LowerCase | UpperCase | TitleCase</h2>
+<p>Texto: {{ texto }}</p>
+<p>Texto en minusculas</p>
+<p>Texto: {{ texto | lowercase }}</p>
+<p>Texto en Mayúsculas</p>
+<p>Texto: {{ texto | uppercase }}</p>
+<p>Texto en Capital Case: Primera letra de cada palabra en Mayúsculas</p>
+<p>Texto: {{ texto | titlecase }}</p>
+<br>
 
 
 <!-- Esto es de Ricky Morty -->
