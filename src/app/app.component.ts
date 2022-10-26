@@ -33,6 +33,9 @@ export class AppComponent {
   //LowerCase | UpperCase | TitleCase => Para modificación de textos, en Mayúsculas, en minusculas, o en Capital case
   texto: string;
 
+  //SlicePipe =>Si trabajamos con Array(colección)coger sólo ciertos elementos.
+  animales: string[];
+
 
   //AsyncPipe
   // promPost: Promise<any[]>;
@@ -60,6 +63,10 @@ export class AppComponent {
 
     //LowerCase | UpperCase | TitleCas
     this.texto = 'En un lugar de la Mancha';
+
+    //SlicePipe
+    this.animales = ['Perro', 'Gato', 'Pájaro', 'Monos', 'Tortuga', 'Caballos']
+
 
     // this.promPost = this.PostsService.getAll();
   }

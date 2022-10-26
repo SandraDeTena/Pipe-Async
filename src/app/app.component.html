@@ -69,6 +69,22 @@ Vienen Pipes de Angular aunque se pueden personalizar.
 <p>Texto: {{ texto | titlecase }}</p>
 <br>
 
+<!-- SlicePipe -->
+<h2>Este es el Pipe de SlicePipe</h2>
+<ul>
+    <li *ngFor="let animal of animales"> {{ animal }}</li>
+</ul>
+<br>
+
+<ul>
+    <p>Sólo sé me va ha mostrar los animales 0 de la lista - 'Perro' - , & el 2 que es el - 'Pájaro' -. </p>
+    <li *ngFor="let animal of animales | slice:0:2"> {{ animal }}</li>
+</ul>
+<br>
+
+<input type="range" min="0" [max]="animales.length-1" strep="1">
+<input type="range" min="0" [max]="animales.length-1" strep="1">
+
 
 <!-- Esto es de Ricky Morty -->
 <!-- <div *ngIf="character">
