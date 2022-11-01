@@ -107,10 +107,14 @@ Vienen Pipes de Angular aunque se pueden personalizar.
 <!-- AsyncPipe => Esto nos permite resolver una promesa dentro de nuestro HTML -->
 <h2>Este es el Pipe de AsyncPipe</h2>
 <p>Mensaje: {{ prom | async }}</p>
-{{ promPosts | async}}
+<!-- {{ promPosts | async | json }} -->
+<br>
+<br>
+<br>
+
 <!-- Iterrar el objectObject -->
-<ul>
+<ol>
     <li *ngFor="let post of promPosts | async">
         {{post.title}}
     </li>
-</ul>
+</ol>

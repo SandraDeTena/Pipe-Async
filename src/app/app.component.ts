@@ -2,6 +2,7 @@ import { Component, VERSION, OnDestroy, OnInit } from '@angular/core';
 import { map, Observable, Subscription, of } from 'rxjs';
 import { PostsService } from './services/posts.service';
 import { delay } from 'rxjs/operators';
+import { Post } from './models/iPost';
 
 
 @Component({
@@ -41,7 +42,7 @@ export class AppComponent {
   //AsyncPipe => Esto nos permite resolver una promesa dentro de nuestro HTML
   prom: Promise<string>;
   //Me va a devolver todas las promesas de la página de: https://jsonplaceholder.typicode.com/guide/
-  promPosts: Promise<any[]>;
+  promPosts: Observable<Post[]>;
 
 
   constructor(private PostsService: PostsService) {
